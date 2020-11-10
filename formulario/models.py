@@ -8,3 +8,7 @@ class datos(models.Model):
     email=models.EmailField()
     fono=models.CharField(max_length=12)
     mensaje=models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.nombre
+    
