@@ -8,6 +8,7 @@ function enviar() {
     let mensaje = document.getElementById("mensaje").value;
     let message = isEmpty(nombre, "NOMBRE");
 
+
     //Validación de campos del formulario
     message = message + isMaxLenght(nombre, "NOMBRE", 56);
     message = message + isMinLenght(nombre, "NOMBRE", 2);
@@ -27,23 +28,23 @@ function enviar() {
 
     //Mostrar Error
     if (message.length > 0) {
-	
-	Swal.fire({
-	  icon: 'error',
-	  title: 'Oops...',
-	  text: 'Favor ingrese datos validos!',
-	  
-	})
-	crearMensajeErrorYExito("danger", message)
-        
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Favor ingrese datos validos!',
+
+        })
+        crearMensajeErrorYExito("danger", message)
+
     } else {
         //Mostrar mensaje de exito
-				Swal.fire({
-  icon: 'success',
-  title: 'Exito!',
-  text: 'Su mensaje ha sido enviado exitosamente'
-})
-		
+        Swal.fire({
+            icon: 'success',
+            title: 'Exito!',
+            text: 'Su mensaje ha sido enviado exitosamente'
+        })
+
         /*limpiarInputPorId(["nombre", "comuna", "email", "telefono", "mensaje"
         ]);*/
         document.getElementById('frm-contact').submit();
