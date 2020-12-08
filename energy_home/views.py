@@ -4,6 +4,7 @@ from django.template.loader import get_template
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect
 from formulario.models import datos
+from rest_framework.decorators import api_view
 
 def inicio(request):
 
@@ -34,7 +35,7 @@ def save_contact_info(request):
         nombre=request.POST['nombre'],
         comuna=request.POST['comuna'],
         email=request.POST['email'],
-        fono=request.POST['fono'],
+        fono=request.POST['telefono'],
         mensaje=request.POST['mensaje']
     )
 
