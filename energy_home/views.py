@@ -6,26 +6,32 @@ from django.views.decorators.csrf import csrf_protect
 from formulario.models import datos
 from rest_framework.decorators import api_view
 
+@api_view(['GET'])
 def inicio(request):
 
     return render(request, "inicio.html")
 
+@api_view(['GET'])
 def productos(request):
 
     return render(request, 'productos.html')
 
+@api_view(['GET'])
 def contacto(request):
 
     return render(request, 'contacto.html')
-    
+
+@api_view(['GET'])
 def servicios(request):
 
     return render(request, 'servicios.html')
 
+@api_view(['GET'])
 def nosotros(request):
 
     return render(request, 'nosotros.html')
 
+@api_view(['POST'])
 @csrf_protect
 def save_contact_info(request):
     print('REQUEST: {0}'.format(request.POST))
