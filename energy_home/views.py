@@ -48,3 +48,9 @@ def save_contact_info(request):
     contact.save()
     return render(request, 'contacto.html')
 
+@api_view(['POST'])
+def save_contact_info(request):
+    print(request.data)
+
+    return JsonResponse({'ok'}, safe=false)
+

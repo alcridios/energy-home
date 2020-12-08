@@ -26,4 +26,5 @@ urlpatterns = [
     path('servicios/', servicios),
     path('contacto/', contacto),
     path('save-contact-info', save_contact_info),
+    path('save-contact-info', save_contact_info),
 ]
